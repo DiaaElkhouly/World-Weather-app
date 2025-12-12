@@ -204,7 +204,7 @@ const WeatherCard = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.weatherapi.com/v1/current.json?key=fba723b410644b75868132256251212&q=${selectedCity}`
+        `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${selectedCity}`
       )
       .then(function (response) {
         // handle success
